@@ -7,10 +7,9 @@ ArduSensor Plugin is a Unity plugin that receives sensor values from an Arduino 
 ![01](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/454e3580-7661-4076-888a-dbf1fe1a7534)
 
 # **How to use:**
+To open a completed project, select the Unity directory in the Unity hub. If you want to modify the code related to the Arduino sensor, edit the ino file in the Arduino directory. If you want to modify the android native method, edit the java file in the Android directory. Note that the Android project is built as a library.
 
-Import the plugin package and build the demo scene to verify the AAR plugin is being imported correctly.
-If not, refer to Unity's official documentation* to properly import the plugin.
-All implementations are written in the AarBridge.cs file. Create a Java instance to communicate with Arduino through Android's Native Methods.
+When you open a Unity project, you should get the plugin package and build the demo scene to ensure that the AAR plugin is properly imported. If not, refer to Unity's official documentation* to properly import the plugin. All implementations are written in the AarBridge.cs file. Create a Java instance to communicate with Arduino through the default method of Android.
 
 - Official Unity documentation related to AAR Plugin :
 https://docs.unity3d.com/kr/2021.3/Manual/AndroidAARPlugins.html
