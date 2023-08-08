@@ -29,6 +29,10 @@ Corresponding C# scripts are implemented for the methods in the aar plugin. Andr
 The implementation of the UI connected to this C# script is also included. It can be customized by assigning to button events.
 
 
+# Hardware Configuration
+![Ardu](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/aad38274-5dda-4e04-af16-8778f9bcccb6)
+
+
 # Assisted Projects
 @mik3y https://github.com/mik3y/usb-serial-for-android
 
