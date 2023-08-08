@@ -4,6 +4,8 @@
 
 ArduSensor Plugin is a Unity plugin that receives sensor values from an Arduino board communicating with Android via serial communication. The plugin is implemented using Android native code, and the call takes place in Unity. The supported sensors include BME680 and SGP30, which detect temperature, humidity, pressure, gas resistance, altitude, CO2, and TVOC. The sensor values are updated every 4 seconds.
 
+![01](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/454e3580-7661-4076-888a-dbf1fe1a7534)
+
 # **How to use:**
 
 Import the plugin package and build the demo scene to verify the AAR plugin is being imported correctly.
