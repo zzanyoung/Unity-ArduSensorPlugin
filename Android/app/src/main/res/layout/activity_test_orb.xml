@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/WHITE">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/envTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="dd"
+            android:textSize="15dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/imuTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/envTextView"
+            android:layout_marginTop="20dp"
+            android:text="dd"
+            android:textSize="15dp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/track_only"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/imuTextView"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button2"
+            android:text="Track Only"
+            android:textColor="#ffffff"
+            android:textSize="12dp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
