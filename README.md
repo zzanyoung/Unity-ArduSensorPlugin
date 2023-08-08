@@ -49,3 +49,5 @@ The implementation of the UI connected to this C# script is also included. It ca
 
 # Assisted Projects
 @mik3y https://github.com/mik3y/usb-serial-for-android
+
+If you'd like to learn more about the serial connection library or are interested in related discussions, please refer to the repository below.
