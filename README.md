@@ -19,13 +19,13 @@ https://docs.unity3d.com/kr/2021.3/Manual/AndroidAARPlugins.html
 
 # Technical Details
 
-The code for implementing USB serial communication in Android is included in the aar plugin.
-The aar plugin contains library and Android Activity for USB serial connection.
-It opens the port and retrieves the vendor ID and device ID of the sensor connected to the Arduino.
-It receives sensor data measured from the device.
-It implements a method for transmitting the measured sensor data to Unity. In Unity, the measured values from the Arduino sensor are displayed.
-Corresponding C# scripts are implemented for the methods in the aar plugin. Android Java Object and Android Java Instance have been used.
-The implementation of the UI connected to this C# script is also included. It can be customized by assigning to button events.
+- The code for implementing USB serial communication in Android is included in the aar plugin.
+- The aar plugin contains library and Android Activity for USB serial connection.
+- It opens the port and retrieves the vendor ID and device ID of the sensor connected to the Arduino.
+- It receives sensor data measured from the device.
+- It implements a method for transmitting the measured sensor data to Unity. In Unity, the measured values from the Arduino sensor are displayed.
+- Corresponding C# scripts are implemented for the methods in the aar plugin. Android Java Object and Android Java Instance have been used.
+- The implementation of the UI connected to this C# script is also included. It can be customized by assigning to button events.
 
 
 # Hardware Configuration
