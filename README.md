@@ -1,4 +1,6 @@
-![arduSensor-Cover](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/f010c2cb-267a-433d-84dc-c7395d436093)
+###### Click on the image to go to YouTube
+[![Youtube_Thumb2](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/d184a775-4d8f-4657-89d2-bba49efd3639)](https://youtu.be/AEGZW-BuSjw&ab_channel=ChanyoungKim)
+
 
 # Unity-ArduSensorPlugin
 
@@ -6,16 +8,24 @@ ArduSensor Plugin is a Unity plugin that receives sensor values from an Arduino 
 
 ![01](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/454e3580-7661-4076-888a-dbf1fe1a7534)
 
-# **How to use:**
+# **How to use**
 To open a completed project, select the Unity directory in the Unity hub. If you want to modify the code related to the Arduino sensor, edit the ino file in the Arduino directory. If you want to modify the android native method, edit the java file in the Android directory. Note that the Android project is built as a library.
 
 When you open a Unity project, you should get the plugin package and build the demo scene to ensure that the AAR plugin is properly imported. If not, refer to Unity's official documentation* to properly import the plugin. All implementations are written in the AarBridge.cs file. Create a Java instance to communicate with Arduino through the default method of Android.
 
-- Official Unity documentation related to AAR Plugin :
-https://docs.unity3d.com/kr/2021.3/Manual/AndroidAARPlugins.html
-- This plugin only works when built for the Android platform.
-- This plugin requires Android SDK 26 or higher.
+- #### Official Unity documentation related to AAR Plugin :
+  - https://docs.unity3d.com/kr/2021.3/Manual/AndroidAARPlugins.html
 
+- #### Plugin Requirements
+  - This plugin only works when built for the Android platform.
+  - This plugin requires Android SDK 26 or higher.
+
+- #### Sensor Info
+  - Pimoroni SGP30 : https://shop.pimoroni.com/products/sgp30-air-quality-sensor-breakout?variant=30924091719763
+  - Adafruit BME680 : https://www.adafruit.com/product/3660
+  
+# Hardware Configuration
+![Ardu](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/aad38274-5dda-4e04-af16-8778f9bcccb6)
 
 # Technical Details
 
@@ -28,16 +38,13 @@ https://docs.unity3d.com/kr/2021.3/Manual/AndroidAARPlugins.html
 - The implementation of the UI connected to this C# script is also included. It can be customized by assigning to button events.
 
 
-# Hardware Configuration
-![Ardu](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/aad38274-5dda-4e04-af16-8778f9bcccb6)
-
-
-# Assisted Projects
+# Reference Project
 @mik3y https://github.com/mik3y/usb-serial-for-android
 
  If you'd like to learn more about the serial connection library or are interested in related discussions, please refer to the repository below.
 
-# License
+
+# MIT License
 MIT License
 
 Copyright (c) 2011-2013 Google Inc.
