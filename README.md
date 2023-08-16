@@ -1,6 +1,5 @@
-###### Click on the image to go to YouTube
 [![Youtube_Thumb2](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/d184a775-4d8f-4657-89d2-bba49efd3639)](https://youtu.be/AEGZW-BuSjw&ab_channel=ChanyoungKim)
-
+https://www.youtube.com/watch?app=desktop&v=AEGZW-BuSjw&ab_channel=ChanyoungKim
 
 # Unity-ArduSensorPlugin
 
