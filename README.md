@@ -3,7 +3,7 @@ https://www.youtube.com/watch?app=desktop&v=AEGZW-BuSjw&ab_channel=ChanyoungKim
 
 # Unity-ArduSensorPlugin
 
-ArduSensor Plugin is a Unity plugin that receives sensor values from an Arduino board(Uno) communicating with Android via serial communication. The plugin is implemented using Android native code, and the call takes place in Unity. The supported sensors include BME680 and SGP30, which detect temperature, humidity, pressure, gas resistance, altitude, CO2, and TVOC. The sensor values are updated every 4 seconds.
+ArduSensor Plugin is a Unity plugin that receives sensor values from an Arduino board(Uno) communicating with Android via serial communication. The plugin is implemented using Android native code, and the call takes place in Unity. The supported sensors include BME680(BME688) and SGP30, which detect temperature, humidity, pressure, gas resistance, altitude, CO2, and TVOC. The sensor values are updated every 4 seconds.
 
 ![01](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/454e3580-7661-4076-888a-dbf1fe1a7534)
 
@@ -21,7 +21,7 @@ When you open a Unity project, you should get the plugin package and build the d
 
 - #### Sensor Info
   - Pimoroni SGP30 : https://shop.pimoroni.com/products/sgp30-air-quality-sensor-breakout?variant=30924091719763
-  - Adafruit BME680 : https://www.adafruit.com/product/3660
+  - Adafruit BME680(BME688) : https://www.adafruit.com/product/3660
   
 # Hardware Configuration
 ![Ardu](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/aad38274-5dda-4e04-af16-8778f9bcccb6)
