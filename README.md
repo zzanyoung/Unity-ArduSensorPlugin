@@ -1,4 +1,5 @@
-[![Youtube_Thumb2](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/d184a775-4d8f-4657-89d2-bba49efd3639)](https://youtu.be/AEGZW-BuSjw&ab_channel=ChanyoungKim)
+![Youtube_Thumb_1750](https://github.com/zzanyoung/Unity-ArduSensorPlugin/assets/53194702/b2d9508c-b57c-4ede-8af4-728e6575add5)
+
 https://www.youtube.com/watch?app=desktop&v=AEGZW-BuSjw&ab_channel=ChanyoungKim
 
 # Unity-ArduSensorPlugin
