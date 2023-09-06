@@ -1,5 +1,5 @@
 #include <SparkFun_SGP30_Arduino_Library.h>
-
+#include <BH1750.h>
 #include <Wire.h>
 #include <SPI.h>
 #include <SoftwareSerial.h>
@@ -14,24 +14,21 @@
 #define SEALEVELPRESSURE_HPA (1013.25)
 #define MAX_LENGTH 20
 
-//Adafruit_BME680 bme; // I2C
 Adafruit_BME680 bme(BME_CS); // hardware SPI
-//Adafruit_BME680 bme(BME_CS, BME_MOSI, BME_MISO,  BME_SCK);
-
 SGP30 sgpSensor;
-
-SoftwareSerial ssSerial = SoftwareSerial(4, 5);
+BH1750 lightMeter;
+SoftwareSerial ssSerial(4, 5);
 
 void setup() {
   Serial.begin(9600);
   ssSerial.begin(9600);
   
-  while (!Serial);
-  Serial.println(F("BME680 test"));
+  //while (!Serial);
+  //Serial.println(F("Sensor Test"));
 
   if (!bme.begin()) {
     Serial.println("Could not find a valid BME680 sensor, check wiring!");
-    while (1);
+    //while (1);
   }
 
   // Set up oversampling and filter initialization
@@ -47,35 +44,36 @@ void setup() {
   }
 
   sgpSensor.initAirQuality();
+  lightMeter.begin();
+  Serial.println(F("Sensor setup done"));
 }
 
 void loop() {
+  // BME680 data reading
   if (! bme.performReading()) {
-    Serial.println("Failed to perform reading :(");
-    return;
+    Serial.println("Failed to perform BME680 reading :(");
+    //return;
   }
+  
+  Serial.println("--------------BME680------------------\n");
   Serial.print("Temperature = ");
   Serial.print(bme.temperature);
   Serial.println(" *C");
-
   Serial.print("Pressure = ");
   Serial.print(bme.pressure / 100.0);
   Serial.println(" hPa");
-
   Serial.print("Humidity = ");
   Serial.print(bme.humidity);
   Serial.println(" %");
-
   Serial.print("Gas = ");
   Serial.print(bme.gas_resistance / 1000.0);
   Serial.println(" KOhms");
-
   Serial.print("Approx. Altitude = ");
   Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA));
   Serial.println(" m");
-
   Serial.println();
 
+  // SGP30 data reading
   Serial.println("--------------SGP30------------------\n");
   delay(1000);
   sgpSensor.measureAirQuality();
@@ -84,10 +82,21 @@ void loop() {
   Serial.print(" ppm\tTVOC: ");
   Serial.print(sgpSensor.TVOC);
   Serial.println(" ppb");
+  Serial.println();
 
-  // Send data 
+  // BH1750 data reading
+
+  Serial.println("--------------BH1750------------------\n");
+  delay(1000);
+  float lux = lightMeter.readLightLevel();
+  Serial.print("Light: ");
+  Serial.print(lux);
+  Serial.println(" lx");
+  Serial.println();
+
+  // Send data
   char env_data[256];
-  char f0[MAX_LENGTH], f1[MAX_LENGTH], f2[MAX_LENGTH], f3[MAX_LENGTH], f4[MAX_LENGTH], f5[MAX_LENGTH], f6[MAX_LENGTH];
+  char f0[MAX_LENGTH], f1[MAX_LENGTH], f2[MAX_LENGTH], f3[MAX_LENGTH], f4[MAX_LENGTH], f5[MAX_LENGTH], f6[MAX_LENGTH], f7[MAX_LENGTH];
   
   dtostrf(bme.temperature, 6, 2, f0);
   dtostrf(bme.humidity, 6, 2, f1);
@@ -96,8 +105,9 @@ void loop() {
   dtostrf(bme.readAltitude(SEALEVELPRESSURE_HPA), 6, 2, f4);
   dtostrf(sgpSensor.CO2, 6, 2, f5);
   dtostrf(sgpSensor.TVOC, 6, 2, f6);
+  dtostrf(lux, 6, 2, f7);
 
-  sprintf(env_data, "%s,%s,%s,%s,%s,%s,%s", f0, f1, f2, f3, f4, f5, f6);
+  sprintf(env_data, "%s,%s,%s,%s,%s,%s,%s,%s", f0, f1, f2, f3, f4, f5, f6, f7);
   ssSerial.println(env_data);
   
   delay(1000);
